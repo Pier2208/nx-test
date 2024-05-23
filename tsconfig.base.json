@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@lpdv/ui/util": ["libs/ui/src/index.ts"]
+      "@lpdv/ui/shadcn": ["libs/ui/shadcn/src/index.ts"],
+      "@lpdv/ui/util": ["libs/ui/util/src/index.ts"],
+      "@lpdv/ui/shadcn/*": ["libs/ui/shadcn/src/*"],
+      "@lpdv/ui/util/*": ["libs/ui/util/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

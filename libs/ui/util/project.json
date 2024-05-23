@@ -1,0 +1,19 @@
+{
+  "name": "ui-util",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/util/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui/util",
+        "main": "libs/ui/util/src/index.ts",
+        "tsConfig": "libs/ui/util/tsconfig.lib.json",
+        "assets": ["libs/ui/util/*.md"]
+      }
+    }
+  }
+}
