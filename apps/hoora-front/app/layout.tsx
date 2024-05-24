@@ -1,4 +1,8 @@
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import { ThemeProvider } from '@mui/material';
+
 import './global.css';
+import theme from '../styles/theme';
 
 export const metadata = {
   title: 'Welcome to hoora-front',
@@ -12,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
